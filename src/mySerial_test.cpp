@@ -23,7 +23,7 @@ int  main( int argc, char** argv )
         // // Or a string
         // serial.Send("this is it\r\n");
 
-        serial.Receive(data, 1)
+        serial.Receive(data, 1);
 
         cout << data << endl;
 
