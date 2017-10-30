@@ -7,7 +7,7 @@ extern "C" {
 #include <iostream>
 using namespace std;
 
-#include "../include/mySerial.h"
+#include "mySerial.h"
 
 mySerial::mySerial(string deviceName, int baud)
 {

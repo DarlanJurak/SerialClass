@@ -1,24 +1,30 @@
-#include "../include/mySerial.h"
+#include "mySerial.h"
 #include <iostream>
 using namespace std;
 
 
 
-int  main(void)
+int  main( int argc, char** argv )
 {
 
-    mySerial serial("/dev/ttyAMA0",115200);
+    mySerial serial(argv[1],115200);
 
-    // One Byte At the time
-     serial.Send(128);
-     serial.Send(132);
+    while(1){
 
-    // An array of byte
-    unsigned char  dataArray[] = { 142,0};
-    serial.Send(dataArray,sizeof(dataArray));
+        // One Byte At the time
+        serial.Send(128);
+        serial.Send(132);
 
-    // Or a string
-    serial.Send("this is it\r\n");
+        // An array of byte
+        // unsigned char  dataArray[] = { 142,0};
+        // serial.Send(dataArray,sizeof(dataArray));
+
+        // // Or a string
+        // serial.Send("this is it\r\n");
+
+        cout << serial.Receive() << endl;
+
+    }
 
     return 0;
 }
