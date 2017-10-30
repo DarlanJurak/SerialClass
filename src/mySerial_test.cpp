@@ -7,7 +7,7 @@ using namespace std;
 int  main( int argc, char** argv )
 {
 
-    mySerial serial(argv[1],115200);
+    mySerial serial(argv[1],9600);
     unsigned char  * data;
 
     while(1){
