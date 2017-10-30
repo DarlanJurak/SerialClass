@@ -13,7 +13,7 @@ int  main( int argc, char** argv )
     while(1){
 
         // One Byte At the time
-        serial.Send(128);
+        //serial.Send(128);
         // serial.Send(132);
 
         // An array of byte

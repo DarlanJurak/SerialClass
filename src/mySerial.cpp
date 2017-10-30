@@ -12,6 +12,7 @@ using namespace std;
 mySerial::mySerial(string deviceName, int baud)
 {
    handle=-1;
+   cout << "Received name:" << deviceName << endl;
    Open(deviceName,baud);
 }
 
